@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Login - Site de Doação e Adoção de Animais</title>
+</head>
+<body>
+
+<div class="login-container">
+	<h1>Bem-vindo ao Sistema de Adoção e Doação de animais</h1>
+    <h2>Login</h2>
+    <form>
+        <label for="id-login">ID-login:</label>
+        <input type="text" id="id-login" name="id-login" required>
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required>
+
+        <button type="button" onclick="entrarNoSite()">Entrar no Sistema</button>
+    </form>
+
+    <div class="links">
+        <a href="senha.html">Esqueceu a senha?</a>
+        <a href="cadasto.html">Cadastre-se</a>
+        <a href="usuario_confir.html">Confirmar Conta</a>
+    </div>
+</div>
+
+<script>
+    function entrarNoSite() {
+        // Redireciona o usuário para outra página (substitua 'outra_pagina.html' pela URL desejada)
+        window.location.href = 'tela_sistema.html';
+    }
+</script>
+
+</body>
+</html>

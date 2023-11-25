@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    color: #4caf50;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Adicionando regras de mídia para ajustar o estilo em telas menores */
+@media screen and (max-width: 1600px) {
+    .container {
+        max-width: 90%; /* Ajustei para 90% para dar um pouco de margem nas bordas */
+        margin: 20px auto; /* Centralizei o container novamente */
+        padding: 10px;
+    }
+    
+    p {
+        font-size: 16px;
+    }
+}
+
+/* Adicionando regras de mídia para telas muito pequenas (menores que 280px) */
+@media screen and (max-width: 280px) {
+    .container {
+        max-width: 90%; /* Ajustei para 90% para dar um pouco de margem nas bordas */
+        margin: 10px auto; /* Centralizei o container novamente e reduzi a margem */
+        padding: 5px; /* Reduzi o padding */
+    }
+
+    p {
+        font-size: 14px; /* Reduzi ainda mais o tamanho da fonte */
+    }
+}

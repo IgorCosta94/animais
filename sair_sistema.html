@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizar Senha</title>
+    <link rel="stylesheet" href="sair_sistema.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <form id="navigationForm">
+                <button type="button" onclick="navigate('editar_perfil.html')">Editar Perfil</button>
+                <button type="button" onclick="navigate('att_senha.html')">Atualizar Senha</button>
+                <button type="button" onclick="navigate('index.html')">Sair do Sistema</button>
+            </form>
+        </nav>
+    </header>
+
+    <section>
+        <h1>Atualizar Senha</h1>
+        <form id="updatePasswordForm" onsubmit="updatePassword(); return false;">
+            <label for="currentPassword">Senha Atual:</label>
+            <input type="password" id="currentPassword" name="currentPassword" required>
+
+            <label for="newPassword">Nova Senha:</label>
+            <input type="password" id="newPassword" name="newPassword" required>
+
+            <label for="confirmPassword">Confirmar Nova Senha:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+            <button type="submit">Atualizar Senha</button>
+        </form>
+    </section>
+
+    <script>
+        function navigate(page) {
+            window.location.href = page;
+        }
+
+        function updatePassword() {
+            // Lógica para atualizar a senha vai aqui
+            alert('Senha atualizada com sucesso!');
+        }
+    </script>
+</body>
+</html>

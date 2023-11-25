@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil</title>
+    <link rel="stylesheet" href="editar_perfil.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <form id="navigationForm">
+                <button type="button" onclick="navigate('editar_perfil.html')">Editar Perfil</button>
+                <button type="button" onclick="navigate('att_senha.html')">Atualizar Senha</button>
+                <button type="button" onclick="navigate('index.html')">Sair do Sistema</button>
+            </form>
+        </nav>
+    </header>
+
+    <section>
+        <h1>Editar Perfil</h1>
+        <form id="editProfileForm" onsubmit="updateProfile(); return false;">
+            <label for="address">Endereço:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="state">Estado:</label>
+            <input type="text" id="state" name="state" required>
+
+            <label for="city">Cidade:</label>
+            <input type="text" id="city" name="city" required>
+
+            <label for="zip">CEP:</label>
+            <input type="text" id="zip" name="zip">
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">WhatsApp/Telefone:</label>
+            <input type="tel" id="phone" name="phone">
+
+            <button type="submit" onclick="navigate('tela_sistema.html')">Atualizar Informações</button>
+        </form>
+    </section>
+
+    <script>
+        function navigate(page) {
+            window.location.href = page;
+        }
+
+        function updateProfile() {
+            // Lógica para atualizar o perfil vai aqui
+            alert('Perfil atualizado com sucesso!');
+            navigate('tela_sistema.html'); // Redireciona para a página desejada após a atualização do perfil
+        }
+    </script>
+</body>
+</html>

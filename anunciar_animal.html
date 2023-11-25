@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Animal para Adoção</title>
+    <link rel="stylesheet" href="anunciar_animal.css">
+</head>
+<body>
+
+    <section>
+        <h1>Cadastrar Animal para Adoção</h1>
+        <form id="animalForm" onsubmit="cadastrarAnimal(); return false;">
+            <label for="animalName">Nome do Animal:</label>
+            <input type="text" id="animalName" name="animalName" required>
+
+            <label for="breed">Raça:</label>
+            <input type="text" id="breed" name="breed" required>
+
+            <label for="gender">Sexo:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Masculino</option>
+                <option value="female">Feminino</option>
+            </select>
+
+            <label for="age">Idade:</label>
+            <input type="text" id="age" name="age" required>
+
+            <label for="size">Porte:</label>
+            <select id="size" name="size" required>
+                <option value="small">Pequeno</option>
+                <option value="medium">Médio</option>
+                <option value="large">Grande</option>
+            </select>
+
+            <label for="details">Detalhes do Animal:</label>
+            <textarea id="details" name="details" rows="4" required></textarea>
+
+            <label for="animalImage">Escolha uma Foto do Animal:</label>
+            <input type="file" id="animalImage" name="animalImage" accept="image/*" required>
+
+            <button type="submit" onclick="navigate('tela_sistema.html')">Anunciar Animal para Adoção</button>
+        </form>
+    </section>
+
+    <script>
+        function navigate(page) {
+            window.location.href = page;
+        }
+
+        function cadastrarAnimal() {
+            // Lógica para cadastrar o animal vai aqui
+            alert('Animal cadastrado para adoção com sucesso!');
+            navigate('tela_sistema.html'); // Redireciona para a página desejada após o cadastro
+        }
+    </script>
+</body>
+</html>

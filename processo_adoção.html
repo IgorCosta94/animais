@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processo de Adoção</title>
+    <link rel="stylesheet" href="processo_adoção.css">
+</head>
+<body>
+    <h1>Processo de Adoção</h1>
+
+    <form>
+       <label>
+            <input type="checkbox" name="interestNotification"> Notificação de Interesse
+        </label>
+        <label>
+            <input type="checkbox" name="contactInProgress"> Doador e interessado em adotar estão em contato
+        </label>
+        <label>
+            <input type="checkbox" name="donorAccepted"> Doador aceitou doar o animal / interessado aceitou adotar animal
+        </label>
+        <label>
+            <input type="checkbox" name="meetingPointSet"> Combinado ponto de encontro para realizar a doação
+        </label>
+        <label>
+            <input type="checkbox" name="animalAdopted"> Animal doado
+        </label>
+        <label>
+            <input type="checkbox" name="provideFeedback"> Forneça um feedback sobre a sua experiência durante esse processo
+        </label>
+
+        <div>
+            <label for="comments">Comentários:</label>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+        </div>
+
+        <button type="button" id="submitButton">Enviar Feedback/Finalizar Processo de Adoção</button>
+    </form>
+
+    <script>
+        // Adiciona um ouvinte de evento de clique ao botão
+        document.getElementById('submitButton').addEventListener('click', function() {
+            // Exibe um alerta quando o botão for clicado
+            alert('Feedback enviado com sucesso!'); // Você pode personalizar a mensagem conforme necessário
+        });
+    </script>
+</body>
+</html>

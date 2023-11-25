@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisar Animais para Adoção</title>
+    <link rel="stylesheet" href="pesquisar_animal.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <form id="navigationForm">
+                <button type="button" onclick="navigate('editar_perfil.html')">Editar Perfil</button>
+                <button type="button" onclick="navigate('att_senha.html')">Atualizar Senha</button>
+                <button type="button" onclick="navigate('cadasto_animal.html')">Cadastrar Animal</button>
+                <button type="button" onclick="navigate('index.html')">Sair do Sistema</button>
+            </form>
+        </nav>
+    </header>
+
+    <section>
+        <h1>Pesquisar Animais para Adoção</h1>
+
+        <form id="searchForm">
+            <label for="searchBar">Pesquisar:</label>
+            <input type="text" id="searchBar" name="searchBar" placeholder="Digite o nome, raça, ou porte do animal">
+
+            <div class="filter-bar">
+                <select id="filter" name="filter">
+                    <option value="all">Todos</option>
+                    <option value="small">Porte Pequeno</option>
+                    <option value="medium">Porte Médio</option>
+                    <option value="large">Porte Grande</option>
+                </select>
+
+                <select id="breedFilter" name="breedFilter">
+                    <option value="all">Todas as Raças</option>
+                    <option value="labrador">Labrador</option>
+                    <option value="golden">Golden Retriever</option>
+                    <!-- Adicione mais raças conforme necessário -->
+                </select>
+
+                <select id="genderFilter" name="genderFilter">
+                    <option value="all">Todos</option>
+                    <option value="male">Masculino</option>
+                    <option value="female">Feminino</option>
+                </select>
+
+                <input type="number" id="ageFilter" name="ageFilter" placeholder="Idade máxima">
+
+                <input type="text" id="locationFilter" name="locationFilter" placeholder="Localização">
+
+                <button type="button" onclick="applyFilters()">Aplicar Filtros</button>
+            </div>
+
+            <button type="button" onclick="performSearch()">Pesquisar</button>
+        </form>
+
+        <div class="animal-grid">
+            <!-- Exemplo de 9 caixas de animais -->
+            <div class="animal-box" onclick="selectAnimal('animal1')">
+                <img src="e.jpg" alt="Animal 1">
+                <p>Nome: Pitukinha</p>
+                <button type="button" onclick="selectThisAnimal('animal1')">Selecionar este Animal?</button>
+            </div>
+            <div class="animal-box" onclick="selectAnimal('animal2')">
+                <img src="f.jpg" alt="Animal 2">
+                <p>Nome: Dengoso</p>
+                <button type="button" onclick="selectThisAnimal('animal2')">Selecionar este Animal?</button>
+            </div>
+            <!-- Adicione mais caixas conforme necessário -->
+        </div>
+    </section>
+	
+
+
+
+	<script>
+        function navigate(page) {
+            window.location.href = page;
+        }
+
+        function applyFilters() {
+            // Lógica para aplicar os filtros vai aqui
+            alert('Filtros aplicados!');
+        }
+
+        function performSearch() {
+            // Lógica de pesquisa vai aqui
+            alert('Pesquisa realizada!');
+        }
+
+        // Função para redirecionar para a Página 1
+        function selectThisAnimal(animalId) {
+            if (animalId === 'animal1') {
+                window.location.href = 'informacoes_animal.html'; // Substitua pela URL desejada
+            } else if (animalId === 'animal2') {
+                window.location.href = 'informacoes_animal2.html'; // Substitua pela URL desejada
+            }
+            // Adicione mais condições conforme necessário para outros animais
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="senha.css">
+    <title>Recuperar Senha - Site de Doação e Adoção de Animais</title>
+</head>
+<body>
+
+<div class="recovery-container">
+    <h2>Recuperar Senha</h2>
+    <p>Informe seu ID-login para recuperar a senha.</p>
+
+    <form id="recoveryForm">
+        <label for="id-login">ID-login:</label>
+        <input type="text" id="id-login" name="id-login" required>
+
+        <button type="button" onclick="enviarEmailRecuperacao()">Enviar Email de Recuperação</button>
+    </form>
+
+    <div class="links">
+        <a href="index.html">Voltar para o Login</a>
+    </div>
+</div>
+
+<script>
+    function enviarEmailRecuperacao() {
+        // Obtém o ID-login do formulário
+        var idLogin = document.getElementById("id-login").value;
+
+        // Monta o link mailto
+        var mailtoLink = "mailto:destinatario@example.com?subject=Recuperação%20de%20Senha&body=ID-login:%20" + idLogin;
+
+        // Abre o cliente de e-mail padrão do usuário
+        window.location.href = mailtoLink;
+    }
+</script>
+
+</body>
+</html>

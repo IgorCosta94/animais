@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="usuario_confir.css">
+    <title>Confirmação de E-mail</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Confirmação de E-mail</h2>
+        <form id="confirmationForm">
+            <label for="email">Digite seu e-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <button type="button" onclick="enviarEmailConfirmacao()">Enviar E-mail de Confirmação</button>
+        </form>
+    </div>
+
+    <script>
+        function enviarEmailConfirmacao() {
+            // Obtém o valor do campo de e-mail
+            var email = document.getElementById("email").value;
+
+            // Monta o link mailto
+            var mailtoLink = "mailto:" + email + "?subject=Confirmação%20de%20E-mail&body=Seu%20e-mail%20foi%20confirmado!";
+
+            // Abre o cliente de e-mail padrão do usuário
+            window.location.href = mailtoLink;
+        }
+    </script>
+</body>
+</html>
